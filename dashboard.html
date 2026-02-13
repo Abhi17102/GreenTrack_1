@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GreenTrack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🌱</span>
+                <span>GreenTrack</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="input.html" class="nav-link">Input</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="suggestions.html" class="nav-link">Suggestions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="dashboard-section fade-in">
+            <h1 class="page-title">Your Carbon Dashboard</h1>
+
+            <div class="dashboard-grid">
+                <div class="stats-card">
+                    <p class="stats-label">Today's Carbon Footprint</p>
+                    <div class="stats-value"><span id="today-footprint">0.00</span> kg CO₂</div>
+                    <div class="status-badge" id="status-badge"></div>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Weekly Total</p>
+                    <div class="stats-value"><span id="weekly-footprint">0.00</span> kg CO₂</div>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Daily Average</p>
+                    <div class="stats-value"><span id="daily-average">0.00</span> kg CO₂</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card fade-in">
+                    <h2 class="chart-title">Breakdown by Category</h2>
+                    <div class="chart-container">
+                        <canvas id="breakdownChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card fade-in">
+                    <h2 class="chart-title">Weekly Trend</h2>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary" onclick="clearAllData()">Clear All Data</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 GreenTrack. Track your carbon. Change your future.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

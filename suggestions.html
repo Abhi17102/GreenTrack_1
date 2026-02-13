@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions - GreenTrack</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🌱</span>
+                <span>GreenTrack</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="input.html" class="nav-link">Input</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="suggestions.html" class="nav-link active">Suggestions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="suggestions-section fade-in">
+            <h1 class="page-title">Your Eco Journey</h1>
+            <p class="page-subtitle">Personalized recommendations to reduce your carbon footprint</p>
+
+            <div class="eco-level-container">
+                <div class="eco-level-card">
+                    <p class="eco-label">Your Eco Level</p>
+                    <div class="eco-badge" id="eco-badge">Eco Beginner</div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-text"><span id="points">0</span> / 100 points</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="habits-container">
+                <h2 class="section-title">Daily Habits</h2>
+                <div class="habits-grid" id="habitsGrid">
+                    <div class="habit-indicator" title="Use Public Transport">
+                        <div class="habit-circle" data-habit="transport">🚌</div>
+                        <p class="habit-name">Transport</p>
+                    </div>
+                    <div class="habit-indicator" title="Reduce Energy">
+                        <div class="habit-circle" data-habit="energy">💡</div>
+                        <p class="habit-name">Energy</p>
+                    </div>
+                    <div class="habit-indicator" title="Plant-Based Meals">
+                        <div class="habit-circle" data-habit="food">🥗</div>
+                        <p class="habit-name">Food</p>
+                    </div>
+                    <div class="habit-indicator" title="Reduce Waste">
+                        <div class="habit-circle" data-habit="waste">♻️</div>
+                        <p class="habit-name">Waste</p>
+                    </div>
+                    <div class="habit-indicator" title="Carbon Offset">
+                        <div class="habit-circle" data-habit="offset">🌍</div>
+                        <p class="habit-name">Offset</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations-container">
+                <h2 class="section-title">Recommendations</h2>
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">🚌</span>
+                            <span class="points-badge">+20 pts</span>
+                        </div>
+                        <h3>Use Public Transport Twice a Week</h3>
+                        <p>Switch from car to bus or train for regular commutes to significantly reduce emissions.</p>
+                        <button class="btn btn-small" onclick="updatePoints(20, 'transport')">Track Progress</button>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">💡</span>
+                            <span class="points-badge">+15 pts</span>
+                        </div>
+                        <h3>Reduce Electricity Usage by 10%</h3>
+                        <p>Switch off devices when not in use and opt for LED bulbs to save energy and money.</p>
+                        <button class="btn btn-small" onclick="updatePoints(15, 'energy')">View Tips</button>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">🥗</span>
+                            <span class="points-badge">+20 pts</span>
+                        </div>
+                        <h3>Switch to Plant-Based Meals</h3>
+                        <p>Try vegetarian or vegan meals at least 3 times a week to reduce food-related emissions.</p>
+                        <button class="btn btn-small" onclick="updatePoints(20, 'food')">View Recipes</button>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">♻️</span>
+                            <span class="points-badge">+15 pts</span>
+                        </div>
+                        <h3>Reduce, Reuse, Recycle</h3>
+                        <p>Minimize waste by recycling properly and choosing reusable alternatives to single-use items.</p>
+                        <button class="btn btn-small" onclick="updatePoints(15, 'waste')">Track Progress</button>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">🌱</span>
+                            <span class="points-badge">+10 pts</span>
+                        </div>
+                        <h3>Plant a Tree</h3>
+                        <p>Join local tree-planting initiatives to offset your carbon emissions and support biodiversity.</p>
+                        <button class="btn btn-small" onclick="updatePoints(10, 'offset')">Learn More</button>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="card-header">
+                            <span class="recommendation-icon">🌍</span>
+                            <span class="points-badge">+20 pts</span>
+                        </div>
+                        <h3>Support Carbon Offset Programs</h3>
+                        <p>Invest in verified carbon offset projects to neutralize your remaining emissions.</p>
+                        <button class="btn btn-small" onclick="updatePoints(20, 'offset')">Explore Programs</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 GreenTrack. Track your carbon. Change your future.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/suggestions.js"></script>
+</body>
+</html>

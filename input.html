@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Input - GreenTrack</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🌱</span>
+                <span>GreenTrack</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="input.html" class="nav-link active">Input</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="suggestions.html" class="nav-link">Suggestions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="input-section fade-in">
+            <h1 class="page-title">Log Your Activities</h1>
+            <p class="page-subtitle">Enter your daily activities to calculate your carbon footprint</p>
+
+            <form class="input-form" id="activityForm">
+                <div class="form-card">
+                    <div class="form-section">
+                        <h2 class="section-heading">🚗 Transportation</h2>
+
+                        <div class="form-group">
+                            <label for="transport-type">Type of Transport</label>
+                            <select id="transport-type" class="form-select">
+                                <option value="">Select transportation type</option>
+                                <option value="car">Car</option>
+                                <option value="bus">Bus</option>
+                                <option value="bike">Bike</option>
+                                <option value="electric">Electric Vehicle</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="distance-group" style="display: none;">
+                            <label for="distance">Distance (km)</label>
+                            <div class="slider-container">
+                                <input type="range" id="distance" class="form-slider" min="0" max="100" value="0">
+                                <span class="slider-value"><span id="distance-value">0</span> km</span>
+                            </div>
+                            <input type="hidden" id="distance-hidden" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-heading">⚡ Electricity</h2>
+
+                        <div class="form-group">
+                            <label for="electricity">Electricity Used (kWh)</label>
+                            <input type="number" id="electricity" class="form-input" placeholder="Enter kWh" min="0" max="1000" step="0.1" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-heading">🍽️ Food</h2>
+
+                        <div class="form-group">
+                            <label for="food-type">Diet Type</label>
+                            <select id="food-type" class="form-select">
+                                <option value="">Select diet type</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="non-vegetarian">Non-Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-heading">♻️ Waste</h2>
+
+                        <div class="form-group">
+                            <label for="waste">Waste Generated (kg)</label>
+                            <input type="number" id="waste" class="form-input" placeholder="Enter kg" min="0" max="100" step="0.1" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Calculate Carbon Footprint</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 GreenTrack. Track your carbon. Change your future.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
